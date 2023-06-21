@@ -1,0 +1,30 @@
+@import '/src/scss/scss-modules/variables';
+
+.details {
+  grid-area: details;
+  height: fit-content;
+  padding: 0 32px;
+  display: flex;
+  justify-content: center;
+  //   margin-bottom: 32px;
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+    gap: 32px;
+    .titles {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      color: $font-color-secondary;
+    }
+
+    .numbers {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}

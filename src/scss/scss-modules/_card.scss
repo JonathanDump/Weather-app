@@ -1,0 +1,54 @@
+@import '/src/scss/scss-modules/variables';
+
+.card {
+  grid-area: card;
+  padding: 0 16px;
+  // margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+
+  .card-body {
+    height: 167px;
+    background-color: $transp-white;
+    border-radius: 16px;
+    border: $border;
+    box-shadow: 2px 8px 20px -1px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+
+    .temperature {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 12px;
+
+      &__title {
+        color: $font-color-secondary;
+      }
+
+      &__number {
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      &__real-feel {
+        color: $font-color-secondary;
+      }
+    }
+
+    .icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &__status {
+        text-align: center;
+        color: $font-color-secondary;
+      }
+    }
+  }
+}

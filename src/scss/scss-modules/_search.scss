@@ -1,0 +1,62 @@
+@import '/src/scss/scss-modules/variables';
+
+.search {
+  grid-area: search;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  // height: 142px;
+
+  height: 100%;
+  position: relative;
+
+  &__input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    position: relative;
+
+    .input-wrapper {
+      position: relative;
+      min-width: 280px;
+      max-width: 500px;
+      width: 100%;
+      input {
+        appearance: none;
+        width: 100%;
+
+        height: 46px;
+        background-color: $transp-white;
+        box-shadow: -2px 8px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 64px;
+        padding: 0 16px;
+        font-size: 18px;
+
+        &::-webkit-search-cancel-button {
+          background-color: red !important;
+          color: red !important;
+          margin-right: 32px;
+        }
+
+        &:focus {
+          appearance: none;
+          outline: none;
+        }
+      }
+
+      .search__icon {
+        position: absolute;
+        top: 16px;
+        right: 22px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
