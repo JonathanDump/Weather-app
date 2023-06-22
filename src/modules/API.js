@@ -18,22 +18,3 @@ export async function getForecast(city) {
     console.log(err);
   }
 }
-
-// {
-//         location: {
-//           name: data['location']['name'],
-//           country: data['location']['country'],
-//           localtime: data['location']['localtime'],
-//         },
-//         current: {
-//           temp_c: data['current'][' temp_c'],
-//           temp_f: data['current'][' temp_f'],
-//           condition: {
-//             text: data['current']['condition']['text'],
-//           },
-//           uv: data['current']['uv'],
-//           humidity: data['current'][' humidity'],
-//           wind_kph: data['current'][' wind_kph'],
-//           wind_mph: data['current'][' wind_mph'],
-//         },
-//       };
