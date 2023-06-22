@@ -45,6 +45,14 @@
       flex-direction: column;
       justify-content: center;
 
+      &__svg {
+        width: 120px;
+
+        img {
+          width: 100%;
+        }
+      }
+
       &__status {
         text-align: center;
         color: $font-color-secondary;

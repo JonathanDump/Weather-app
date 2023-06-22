@@ -3,8 +3,10 @@
   height: 144px;
   overflow-x: auto;
   height: fit-content;
-  // margin-bottom: 32px;
+  // max-width: 1200px;
   scrollbar-width: none;
+  // justify-content: center;
+  // display: flex;
 
   &::-webkit-scrollbar {
     display: none;
@@ -15,7 +17,7 @@
     padding: 0 16px;
     gap: 16px;
     width: fit-content;
-    // width: 100%;
+    white-space: nowrap;
 
     .info-pill {
       box-sizing: border-box;
