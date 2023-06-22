@@ -3,10 +3,8 @@
   height: 144px;
   overflow-x: auto;
   height: fit-content;
-  // max-width: 1200px;
   scrollbar-width: none;
-  // justify-content: center;
-  // display: flex;
+  padding: 0 16px;
 
   &::-webkit-scrollbar {
     display: none;
@@ -14,10 +12,9 @@
 
   .slider {
     display: flex;
-    padding: 0 16px;
+
     gap: 16px;
     width: fit-content;
-    white-space: nowrap;
 
     .info-pill {
       box-sizing: border-box;

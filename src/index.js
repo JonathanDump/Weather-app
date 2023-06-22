@@ -23,6 +23,3 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   loadDataOnPage();
 });
-slider.addEventListener('mousedown', dragStart);
-slider.addEventListener('mousemove', dragging);
-slider.addEventListener('mouseup', dragStop);

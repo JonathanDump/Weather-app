@@ -98,8 +98,8 @@ export async function loadDataOnPage(e) {
           )}</div>
         </div>`;
   });
-
   searchInput.value = '';
+  setColor(Math.round(data.current.temp_c));
 }
 
 export function camelCase(str) {
@@ -118,25 +118,10 @@ function findPicture(condition, hour) {
   }
 }
 
-let isDragStart = false,
-  prevPageX,
-  prevScrollLeft;
-
-export function dragging(e) {
-  if (!isDragStart) {
-    return;
-  }
-  e.preventDefault();
-  let positionDiff = e.pageX - prevPageX;
-  slider.scrollLeft = prevScrollLeft - positionDiff;
-}
-
-export function dragStart(e) {
-  isDragStart = true;
-  prevPageX = e.pageX;
-  prevScrollLeft = slider.scrollLeft;
-}
-
-export function dragStop() {
-  isDragStart = false;
+function setColor(temp) {
+  const initialColor = [128, 166, 128];
+  const circle = document.querySelector('.circle');
+  circle.style.backgroundColor = `rgba(${initialColor[0] + temp * 5}, 166, ${
+    initialColor[2] - temp * 5
+  }, 0.4)`;
 }
