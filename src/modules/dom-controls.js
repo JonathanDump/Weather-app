@@ -35,8 +35,9 @@ const pictures = {
   cloudy: cloudy,
 };
 
+let city = 'Zhytomyr';
+
 export async function findCity(e) {
-  let city = 'Zhytomyr';
   if (searchInput.value) {
     city = searchInput.value;
   }
@@ -45,14 +46,12 @@ export async function findCity(e) {
 }
 
 export async function loadDataOnPage(e) {
-  // if (e.type == 'submit') {
-  //   e.preventDefault();
-  // }
-
   const data = await findCity();
+
   if (!data) {
     return;
   }
+
   location.textContent = `${data['location']['name']}, ${data['location']['country']}`;
 
   date.textContent = format(new Date(data.location.localtime), 'dd-MMM-yyy');

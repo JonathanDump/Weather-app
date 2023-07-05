@@ -14,7 +14,6 @@ export async function getForecast(city) {
     const data = await response.json();
     // return data;
     if (data) {
-      console.log(data);
       return data;
     }
   } catch (err) {
